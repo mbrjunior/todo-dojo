@@ -1,15 +1,19 @@
-import React from "react";
-import Task from "./Task";
+import React from 'react';
+import Task from './Task';
 
 interface TaskListProps {
   tasks: string[];
+  onDeleteTask: (index: number) => void;
 }
 
-const TaskList: React.FC<TaskListProps> = ({ tasks }) => {
+const TaskList: React.FC<TaskListProps> = ({ tasks, onDeleteTask }) => {
   return (
     <div className="task-list">
       {tasks.map((task, index) => (
-        <Task key={index} task={task} />
+        <div key={index} className="task-item">
+          <Task task={task} />
+          <button onClick={() => onDeleteTask(index)}>Delete</button>
+        </div>
       ))}
     </div>
   );
