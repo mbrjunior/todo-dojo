@@ -21,7 +21,7 @@ const AddTaskForm: React.FC<AddTaskFormProps> = ({ onAddTask }) => {
   return (
     <div className="add-task-form">
       <input type="text" value={newTask} onChange={handleInputChange} />
-      <button onClick={handleAddTask}>Add Task</button>
+      <button onClick={handleAddTask}>Adicionar tarefa</button>
     </div>
   );
 };

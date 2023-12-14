@@ -10,10 +10,10 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1>ToDo List</h1>
+      <h1>Lista de Tarefas</h1>
       <TaskList tasks={tasks} onDeleteTask={deleteTask} />
       <AddTaskForm onAddTask={addTask} />
-      <button onClick={clearTasks}>Clear All Tasks</button>
+      <button onClick={clearTasks}>Limpar tudo</button>
     </div>
   );
 };
