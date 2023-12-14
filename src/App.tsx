@@ -6,14 +6,13 @@ import "./App.css";
 
 
 const App: React.FC = () => {
-  const [{ tasks }, { addTask, deleteTask, clearTasks }] = useTasks();
+  const [{ tasks }, { addTask }] = useTasks();
 
   return (
     <div className="App">
       <h1>Lista de Tarefas</h1>
-      <TaskList tasks={tasks} onDeleteTask={deleteTask} />
+      <TaskList tasks={tasks} />
       <AddTaskForm onAddTask={addTask} />
-      <button onClick={clearTasks}>Limpar tudo</button>
     </div>
   );
 };
